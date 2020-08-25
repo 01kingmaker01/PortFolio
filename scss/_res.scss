@@ -1,0 +1,137 @@
+@include sm {
+  .about {
+    .svg {
+      grid-template-columns: repeat(2, 1fr);
+      &-logo {
+        width: 40vw;
+      }
+    }
+  }
+}
+
+@include md {
+  .menu-btn {
+    visibility: hidden;
+  }
+  .nav {
+    visibility: visible;
+  }
+  .menu-nav {
+    display: block;
+    transform: translateY(0);
+    height: 100%;
+    background: transparent;
+    text-align: right;
+  }
+  .menu-item {
+    display: inline;
+    padding-right: 1.5rem;
+  }
+  .menu-link {
+    font-size: 1.5rem;
+  }
+
+  .about {
+    .svg {
+      grid-template-columns: repeat(3, 1fr);
+      &-logo {
+        width: 28vw;
+      }
+    }
+    &-bio {
+      .text-secondary {
+        font-size: 3.5rem !important;
+      }
+    }
+  }
+
+  .projects {
+    &-bio-img {
+      height: 40vh;
+    }
+    &-items {
+      width: 80vw;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .text-secondary {
+      font-size: 5rem;
+    }
+  }
+
+  .contact {
+    &-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@include lg {
+  .about {
+    .svg {
+      grid-template-columns: repeat(3, 1fr);
+      &-logo {
+        width: 25vw;
+      }
+    }
+
+    .social {
+      display: flex;
+      flex-direction: row;
+      a {
+        padding-bottom: 0rem;
+      }
+    }
+
+    footer {
+      span {
+        padding: 0 auto;
+        display: flex;
+      }
+      text-align: center;
+      margin-bottom: 0rem;
+      transform: rotate(0);
+    }
+  }
+  .projects {
+    &-items {
+      width: 72vw;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .text-secondary {
+      font-size: 3rem;
+    }
+
+    .social {
+      display: flex;
+      flex-direction: row;
+    }
+
+    footer {
+      right: 3px;
+      text-align: center;
+      margin-bottom: 0rem;
+      transform: rotate(0);
+    }
+  }
+
+  .contact-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .about {
+    .svg {
+      grid-template-columns: repeat(4, 1fr);
+      &-logo {
+        width: 15vw;
+      }
+    }
+  }
+}
+
+@include xl {
+  .project-bio-img {
+    height: 50vh;
+  }
+}
